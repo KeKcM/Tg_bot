@@ -1,0 +1,56 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Стиль для рулетки */
+.wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #333;
+    overflow: hidden;
+}
+
+.wheel .slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: lightblue;
+    transform-origin: 100% 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+/* Стили для секций рулетки */
+.wheel .slice:nth-child(1) { transform: rotate(0deg); background-color: #f54242; }
+.wheel .slice:nth-child(2) { transform: rotate(45deg); background-color: #f5a442; }
+.wheel .slice:nth-child(3) { transform: rotate(90deg); background-color: #f5e042; }
+.wheel .slice:nth-child(4) { transform: rotate(135deg); background-color: #7cf542; }
+.wheel .slice:nth-child(5) { transform: rotate(180deg); background-color: #42f554; }
+.wheel .slice:nth-child(6) { transform: rotate(225deg); background-color: #42f5ce; }
+.wheel .slice:nth-child(7) { transform: rotate(270deg); background-color: #4287f5; }
+.wheel .slice:nth-child(8) { transform: rotate(315deg); background-color: #ce42f5; }
+
+/* Кнопка запуска */
+#spinButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
